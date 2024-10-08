@@ -104,7 +104,7 @@ $ python3 client.py 127.0.0.1 55556 TCP receive
 
 ## Assumptions
 
-* No messages are longer than 3000 bytes. This requirement was supplied in the homework document. The client is capable of sending more than 3000 bytes, but both server and client reception buffers are limited to 3000.
+* No messages are longer than 3000 bytes. This requirement was supplied. The client is capable of sending more than 3000 bytes, but both server and client reception buffers are limited to 3000.
 * No failures, and the server is persistent. The queue does not need to persist between executions of the server.
 * No messages begin with the cstring ``<<GET>>``. This is a header used by the server to determine if the client is requesting a message from the server, which helps account for 0 byte message files, which are considered valid.
 
@@ -183,7 +183,7 @@ $ python3 client.py localhost 55556 TCP receive
 
 ## Testing completed
 
-* Functional tests were conducted on Isengard using Python 3.8.10.
+* Functional tests were conducted on Debian 12 using Python 3.8.10.
 * Server:
     - Tested in both TCP and UDP modes.
     - Tested with multiple clients sending messages to the server, each receiving a thread.
